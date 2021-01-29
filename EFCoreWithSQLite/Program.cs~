@@ -1,0 +1,25 @@
+﻿using System;
+
+namespace EFCoreWithSQLite
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(">>> Starting the appppp <<<");
+
+            // create new object of type Product
+            Product product = new Product()
+            {
+                Id = 1,
+                Name = "Item 1"
+            };
+
+            //add it to the DB
+            ProductService.Add(product);
+
+            //get all products from the db
+            ProductService.GetAll();
+        }
+    }
+}
